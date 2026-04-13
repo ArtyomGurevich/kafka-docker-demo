@@ -51,6 +51,35 @@ It includes multiple producers and consumers communicating through Kafka topics,
 
 ---
 
+## 🏗️ Architecture Diagram
+
++-------------------+      +-------------------+      +-------------------+
+| orders-producer   |      | payments-producer |      | notifications-prod|
++-------------------+      +-------------------+      +-------------------+
+            \                   |                   /
+             \                  |                  /
+              \                 |                 /
+               v                v                v
+                      +-------------------+
+                      |   Kafka Broker    |
+                      +-------------------+
+                               |
+        +----------------------+----------------------+
+        |                      |                      |
+        v                      v                      v
++----------------+     +----------------+     +----------------+
+| orders-consumer|     | payments-consum|     | notif-consumer |
++----------------+     +----------------+     +----------------+
+
+                      +-------------------+
+                      |     Kafka UI      |
+                      | (monitor topics & |
+                      | consumer groups)  |
+                      +-------------------+
+
+
+---
+
 ## 🛠️ Skills Demonstrated
 - Docker Compose orchestration
 - Kafka basics (topics, producers, consumers, consumer groups)
