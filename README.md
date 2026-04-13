@@ -23,7 +23,7 @@ It includes multiple producers and consumers communicating through Kafka topics,
 ## 🚀 How to Run
 1. Clone the repo:
    ```bash
-   git clone git@github.com:ArtyomGurevich/kafka-docker-demo.git
+   git clone https://github.com/ArtyomGurevich/kafka-docker-demo.git
    cd kafka-docker-demo
    ```
 
@@ -104,6 +104,20 @@ flowchart TD
 
 ### Kafka Dashboard
 ![Kafka Dashboard](KafkaDashboard.png)
+
+---
+
+## 🛠️ Skills Demonstrated
+
+This project highlights practical DevOps and Cloud Engineering skills:
+
+- **Containerization**: Dockerized setup for Kafka producers and consumers.  
+- **Messaging & Streaming**: Apache Kafka broker with multiple topics and consumer groups.  
+- **Automation**: Reproducible demo stack using Docker Compose.  
+- **CI/CD Awareness**: Workflow design suitable for GitHub Actions integration.  
+- **Monitoring**: Kafka UI for topic and consumer group visibility.  
+- **Scripting**: Producer/consumer logic scripted for automated message flow.  
+- **Infrastructure Thinking**: End‑to‑end architecture from producers → broker → consumers.  
 
 ---
 
