@@ -53,31 +53,25 @@ It includes multiple producers and consumers communicating through Kafka topics,
 
 ## 🏗️ Architecture Diagram
 
-+-------------------+      +-------------------+      +-------------------+
-| orders-producer   |      | payments-producer |      | notifications-prod|
-+-------------------+      +-------------------+      +-------------------+
-            \                   |                   /
-             \                  |                  /
-              \                 |                 /
-               v                v                v
-                      +-------------------+
-                      |   Kafka Broker    |
-                      +-------------------+
-                               |
-        +----------------------+----------------------+
-        |                      |                      |
-        v                      v                      v
-+----------------+     +----------------+     +----------------+
-| orders-consumer|     | payments-consum|     | notif-consumer |
-+----------------+     +----------------+     +----------------+
 
-                      +-------------------+
-                      |     Kafka UI      |
-                      | (monitor topics & |
-                      | consumer groups)  |
-                      +-------------------+
+```mermaid
+flowchart TD
+    subgraph Producers
+        O[orders-producer]
+        P[payments-producer]
+        N[notifications-producer]
+    end
 
+    O --> B[Kafka Broker]
+    P --> B
+    N --> B
 
+    B --> OC[orders-consumer]
+    B --> PC[payments-consumer]
+    B --> NC[notifications-consumer]
+
+    B --> UI[Kafka UI]
+    ```
 ---
 
 ## 🛠️ Skills Demonstrated
