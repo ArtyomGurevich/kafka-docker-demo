@@ -53,7 +53,6 @@ It includes multiple producers and consumers communicating through Kafka topics,
 
 ## 🏗️ Architecture Diagram
 
-
 ```mermaid
 flowchart TD
     subgraph Producers
@@ -71,7 +70,8 @@ flowchart TD
     B --> NC[notifications-consumer]
 
     B --> UI[Kafka UI]
-    ```
+```
+
 ---
 
 ## 🛠️ Skills Demonstrated
